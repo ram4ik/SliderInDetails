@@ -9,8 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var sliderValue: Double = 50
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Slider(value: $sliderValue, in: 0...100)
+            Divider()
+            Text("Slider value: \(sliderValue)")
+        }.padding()
     }
 }
 
